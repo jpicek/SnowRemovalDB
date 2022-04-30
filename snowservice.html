@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Snow Service Database</title>
+</head>
+<body>
+	<main role="main" class="container-fluid">
+	<h1>Snow Service Database</h1>
+	
+	<h2>Display Data by</h2>
+	
+	<div style="padding-left: 5%; padding-right: 5%;">
+		<form action="display.php" method="post">
+			<div class="form-group">
+				<select class="form-control" id="searchtype" name="searchtype">
+					<option value="customer">Customers and Addresses</option>
+					<option value="removal">Removal</option>
+					<option value="event">Snowfall Event</option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-success">Display</button>	
+		</form>
+	</div>
+	<br>
+	
+	<h2>Add Data</h2>
+	
+	<div style="padding-left: 5%; padding-right: 5%;">
+				<a href="addevent.html">Add Snowfall Event...</a><br>
+				<a href="addremoval.html">Add Removal Event...</a><br>
+				<a href="setpaid.php">Mark Services Paid...</a><br>
+	</div>
+	
+	<br><br>
+	
+	<h2>Search</h2>
+	
+	<div style="padding-left: 5%; padding-right: 5%;">
+	<form action="srs-results.php" method="post">
+		<div><h3>Customers</h3></div>
+		<div class="form-group">
+		
+			<label for="term">Search Customers by Name:</label>
+			<input type="text" name="searchname" class="form-control" name="searchname"/>
+		</div>
+		<div class="form-group"> 
+			<label for="term">Search Addresses by Zip Code:</label>
+			<input type="text" name="searchzip" class="form-control" name="searchzip"/>
+		</div>
+		<div><h3>Removals</h3></div>
+		<div class="form-group"> 
+			<label for="term">Search Removals by Name:</label>
+			<input type="text" name="searchremname" class="form-control" name="searchremname"/>
+		</div>
+		<div class="form-group"> 
+			<label for="term">Search Removals by Date:</label>
+			<input type="date" name="searchdate" class="form-control" name="searchdate"/>
+		</div>
+
+		
+		<button type="submit" class="btn btn-primary">Search</button>
+		<button type="reset" class="btn btn-warning">Clear</button>	
+	</form>
+	</div>
+</body>
+</html>

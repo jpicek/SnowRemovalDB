@@ -1,0 +1,34 @@
+**********
+To Do
+**********
+
+- To make this fully usable for a real business, more aggregate functions would be helpful,
+	some examples of that are:
+	* Searching Removals by Name should SUM each separate Customer, ie:
+		Search "MARIO" should provide SUM of Mario Mario,
+		and SUM of Luigi Mario, for like a "Total Owed"
+	* A Paid/Unpaid query using similar logic to the SUM(IF() for wasSnowRemoved
+		and wasWalkwaySalted in the RemovalsPrices VIEW to generate a
+		report on which customers have remaining balances
+	* I have not implemented these, my VIEWs and front-end seem to be
+		too complicated already
+
+**********
+Completed:
+**********
+
+- CREATE DB
+- CREATE TABLES
+- Reasonable data types
+- PKs, FKs, actions for ON UPDATE and ON DELETE
+- Sample Data for 2/4 tables
+- Sample Data for 3rd and 4th Tables
+- Statement to create index on LastName
+- Decide if any other Indexes needed??
+- Added indexes for the other available search terms, ZipCode and Date
+- Statement to Create user and grant permissions, this user will be used by PHP scripts for access
+
+- HTML page(s) to display forms for:
+- PHP script displaying user-relevant data
+- PHP script that filters data based on some criteria
+- PHP script for adding data which prevents SQL injection

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Snow Service - Add Event</title>
+</head>
+<body>
+	<main role="main" class="container-fluid">
+		<h1>Snow Removal Service</h1>
+		<a href="snowservice.html"><< Back to Snow Service Database</a><br>
+		<h2>Add Snowfall Event...</h2>
+		<form action="add.php" method="post">
+			<div class="form-group">
+				<p>
+					<input type="hidden" name="addtype" value="event"/>
+					<label for="date">Date</label>
+					<input type="date" name="date" maxlength="50" size="80"/>
+				</p>
+				
+				<p>
+					<label for="time">Time</label>
+					<input type="time" step="1" name="time" maxlength="50" size="80"/>
+				</p>
+				
+				<p>
+					<label for="inches">Snowfall</label>
+					<input type="text" name="inches" maxlength="3" size="10"/>
+					in Inches
+				</p>
+			</div>	
+			&ensp;
+			&ensp;
+			<button type="reset" class="btn btn-warning">Clear</button>
+			&ensp;
+			&ensp;
+			<button type="submit" class="btn btn-success">Add to Database</button>
+		</form>
+</body>
+</html>
